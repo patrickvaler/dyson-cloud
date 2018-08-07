@@ -22,7 +22,7 @@ const myAccount = DysonCloud.build('example@email.com', 'myPassword123'); // or 
 
 ### getDevices()
 
-Fetches user account related device information from Dyson Cloud.
+Fetches user account related device information from Dyson Cloud. LocalCredentials can be used to authenticate with the Dyson Device in the local network via `mqtt`.
 
 #### Examples
 
@@ -33,20 +33,22 @@ myAccount.getDevices()
 
 #### Returns
 
-`Promise<Array<DysonDeviceManifest>>`
+`Promise<Array<DeviceManifest>>`
 
-**DysonDeviceManifest**
+**DeviceManifest**
 
 ```javascript
 {
-  Serial: 'VS8-EU-KDA1234A',
-  Name: 'Living room',
-  Version: 'ECG2PF.02.05.001.0006',
-  LocalCredentials:
-    'aLixwNk9dxBUh96Lupfx+lu8W6FY3xbRAx8BajM35dIHlPk0frmFsDpZUOpSgT1saQDIOfkqML/UlxoMnKgOlrQpxoxxUl3AHut/0Pmp0xU11208mseIP5IwxwuKdXyjhWuwjZZ0x9d8x9wp+lf3ZrhUPOwT8dPmiEausQYjiYtF2fdO23xhXqwGD3/0g09',
-  AutoUpdate: true,
-  NewVersionAvailable: false,
-  ProductType: '438'
+  autoUpdate: true,
+  localCredentials: {
+    username: 'VS8-EU-KDA1234A',
+    password: 'a7lbLMDkPs74LK7qfWnLV9AXhTYoj0uIpLlj5N+KZkLxtlKGhDBJsVe2KgX8UQpyXxXRDuIEShHZWkQe4j000w=='
+  }
+  name: 'Living room',
+  newVersionAvailable: false,
+  productType: '438',
+  serial: 'VS8-EU-KDA1234A',
+  version: 'ECG2PF.02.05.001.0006'
 }
 ```
 
