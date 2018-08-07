@@ -15,7 +15,7 @@ npm install --save dyson-cloud
 
 ```javascript
 const DysonCloud = require('dyson-cloud');
-const myAccount = new DysonCloud('example@email.com', 'myPassword123');
+const myAccount = DysonCloud.build('example@email.com', 'myPassword123'); // or new DysonCloud('example@email.com', 'myPassword123');
 ```
 
 ## API
