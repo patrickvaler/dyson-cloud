@@ -27,7 +27,7 @@
     "eslint": "^6.0.0",
     "eslint-config-prettier": "^4.1.0",
     "prettier": "^1.14.0",
-    "semantic-release": "^15.9.5",
+    "semantic-release": "^17.0.6",
     "travis-deploy-once": "^5.0.2"
   },
   "dependencies": {
